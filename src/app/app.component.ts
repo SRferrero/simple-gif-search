@@ -3,7 +3,7 @@ import {FormControl, Validators} from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
 
 import { Observable, BehaviorSubject, combineLatest} from 'rxjs';
-import { map, mergeMap, debounceTime, filter } from 'rxjs/operators';
+import { map, debounceTime, filter, switchMap } from 'rxjs/operators';
 
 import { GifsService } from './sevices/gifs.service';
 import { GIF, Pagination } from '../models/gif.model';
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     const gifData$ = this.searchFomcControl.valueChanges.pipe(
       debounceTime(600),
       map((query) => DB_OF_BAD_WORDS.includes(query.toLowerCase()) ? 'hired' : query),
-      mergeMap((query: string) => this.gifService.getGif({query})),
+      switchMap((query: string) => this.gifService.getGif({query})),
     )
     const giphyPagination$: Observable<Pagination> = gifData$.pipe(filter(({pagination}) => !!pagination),map(({pagination}) => pagination));
 
