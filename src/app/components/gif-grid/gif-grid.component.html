@@ -1,0 +1,17 @@
+<section class="flex flex-wrapping">
+  <div *ngFor="let data of gifs; let i = index" class="flex">
+    <mat-card *ngIf="isCardInCurrentPage(i)" class="card-wrapper">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title> Title: {{data.title}}</mat-card-title>
+        <mat-card-subtitle>Id: {{data.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="data.images.original.webp" [alt]="data.title">
+      <mat-card-content>
+        <p>
+           Source Post: {{data.source_post_url || 'Not found'}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

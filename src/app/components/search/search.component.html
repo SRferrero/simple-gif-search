@@ -1,0 +1,11 @@
+<mat-form-field class="full-width form">
+    <input matInput placeholder="Search Gif" [formControl]="searchFomcControl"
+           [errorStateMatcher]="matcher">
+    <mat-hint>Dont try bad words such as fuck or joder!</mat-hint>
+    <mat-error *ngIf="searchFomcControl.hasError('required')">
+      Search is required
+    </mat-error>
+    <mat-error *ngIf="searchFomcControl.hasError('badWords')">
+      Did you mean <strong>You are hired</strong>?
+    </mat-error>
+  </mat-form-field>

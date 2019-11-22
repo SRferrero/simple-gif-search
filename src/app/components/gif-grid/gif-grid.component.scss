@@ -1,0 +1,15 @@
+.card-wrapper {
+  width: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex
+}
+
+.flex-wrapping {
+  flex-wrap: wrap
+}

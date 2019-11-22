@@ -1,0 +1,14 @@
+
+  <div class="header" role="banner">
+    <span>Welcome To a simple app to search gifs</span>
+  </div>
+
+  <main class="main-container">
+    <search [searchFomcControl]="searchFomcControl"></search>
+    <gif-grid [gifs]="gifs$ | async" [cardDisplayConfig]="cardDisplayConfig"></gif-grid>
+    <pagination [pagination]="pagination$ | async" (changePageSize)="changeAmountItems($event)"></pagination>
+  </main>
+
+  <footer class="footer">
+    Thanks for watching
+  </footer>
