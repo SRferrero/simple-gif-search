@@ -32,4 +32,4 @@ I used cypress for e2e since I love how easy is to create tests with this tool.
 
 # how to run it
 
-We need to have the app running and then runn the e2e tests. We can run just the cypress with `npm run cypress:open` and the app with `npm start`.
+We need to have the app running and then runn the e2e tests. We probably have the app open while tryinh it (done with `npm start`) so we can just run cypress with `npm run cypress:open`. This will open a popul with the scenarios and from there we can just see them life.

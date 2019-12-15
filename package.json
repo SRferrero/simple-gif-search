@@ -6,7 +6,6 @@
     "start-prod": "npm run prod && serve ./dist/search-gif",
     "build": "ng build",
     "prod": "ng build -c production",
-    "cypress:run": "npm run start && cypress open",
     "cypress:open": "cypress open",
     "lint": "ng lint"
   },
