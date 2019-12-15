@@ -8,9 +8,17 @@
       </mat-card-header>
       <img mat-card-image [src]="data.images.original.webp" [alt]="data.title">
       <mat-card-content>
-        <p>
-           Source Post: {{data.source_post_url || 'Not found'}}
-        </p>
+          <div>
+              Source Post:
+              <a *ngIf="data.source_post_url; else noPostUrl" [href]="data.source_post_url" target="_blank">
+                {{ data.source_post_url }}
+              </a>
+              <ng-template #noPostUrl>
+                  <span>
+                    Not found
+                  </span>
+              </ng-template>
+            </div>>
       </mat-card-content>
     </mat-card>
   </div>
