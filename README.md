@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 please install the dependencies by running `npm install`
 
+I chose to not go for the overengenering adding libraries for managing state and so and make an easy to read application. Coul look a bit stright forward and simple, but sometimes less is more.
+
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
@@ -16,10 +18,18 @@ If you want to serve the prod build you can run `npm run start-prod` and after i
 
 ## What is next
 
-Next steps (since the time cap was around 2h) would be writing cypess and unit test in order to make everything prod ready.
+Next steps is unit test in order to make everything prod ready.
 
 ## Using the app
 
 The app is fairly simple. I didnt want to add any button for search since its straight forward the search bar with a small debounce on it and it will display the list of gifs you searched.
 
 Some funcionality is hardcoded since its a demo app, but the baseline to expand from it is "drawn" in this app.
+
+## E2E
+
+I used cypress for e2e since I love how easy is to create tests with this tool.
+
+# how to run it
+
+We need to have the app running and then runn the e2e tests. We can run just the cypress with `npm run cypress:open` and the app with `npm start`.
