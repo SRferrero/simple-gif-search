@@ -6,8 +6,8 @@ import { map, } from 'rxjs/operators';
 
 import { GetGifs } from '../../models/gif.model';
 
-const apiKey = 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6'
-const GIPHYURL = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}`
+const apiKey = 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6';
+export const GIPHYURL = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}`;
 
 export interface GetGifsReq {
   lang?: string;
@@ -27,7 +27,7 @@ export class GifsService {
       .get(`${GIPHYURL}&q=${encodeURI(query)}&limit=${limit}&lang=${lang}`)
       .pipe(
         map((gifs: GetGifs) => gifs)
-      )
+      );
   }
 
 }
