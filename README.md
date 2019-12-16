@@ -18,13 +18,18 @@ If you want to serve the prod build you can run `npm run start-prod` and after i
 
 ## What is next
 
-Next steps is unit test in order to make everything prod ready.
+Next things could be add some store like NgRx. Maybe implement some more advanced patterns like the Facade to show some more maintanable services.
+Another things that can be played with would be tailwindcss.
 
 ## Using the app
 
 The app is fairly simple. I didnt want to add any button for search since its straight forward the search bar with a small debounce on it and it will display the list of gifs you searched.
 
 Some funcionality is hardcoded since its a demo app, but the baseline to expand from it is "drawn" in this app.
+
+## Unit tests
+
+All you have to do is run `npm test` and karma will run the test suites. `http://localhost:9876/` will be opened by default for a visual interface of the tests as well.
 
 ## E2E
 

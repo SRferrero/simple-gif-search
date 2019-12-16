@@ -6,7 +6,7 @@ import { GifsService } from './sevices/gifs.service';
 import { mockGifServiceFactory } from '../mocks/giphService.mock';
 import { MOCK_GIFS_RESPONSE } from '../mocks/giph.mock';
 
-describe('Gif grid component', () => {
+describe('App component', () => {
 
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
@@ -14,8 +14,6 @@ describe('Gif grid component', () => {
   let giphService: GifsService;
 
   beforeEach(async(() => {
-    // Since I did feature components I could just import the module for the gif as I did in the others
-    // But just to show also how would I create a testbed with just the required elements
     TestBed.configureTestingModule({
       imports: [
         AppModule
