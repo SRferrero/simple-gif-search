@@ -8,9 +8,7 @@ export interface Images {
 }
 export interface GIF {
   id: string;
-  url: string;
   title: string;
-  bitly_url: string;
   source_post_url: string;
   images: Images;
 }
